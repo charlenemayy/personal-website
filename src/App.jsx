@@ -1,14 +1,18 @@
+import React from 'react'
 import { useState } from 'react'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore from "swiper"
+import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules'
 
 import 'swiper/css'
-import 'swiper/css/effect-coverflow';
+import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
 import './App.css'
 
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+SwiperCore.use([Navigation, Pagination, EffectCoverflow])
 
 function App() {
   return (
@@ -20,14 +24,15 @@ function App() {
         centeredSlides={true}
         slidesPerView={'auto'}
         coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
+          rotate: 0,
+          stretch: 80,
+          depth: 200,
           modifier: 1,
-          slideShadows: true,
+          slideShadows: false,
         }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        pagination={false}
+        loop={true}
+        navigation
         className="my-swiper">
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
