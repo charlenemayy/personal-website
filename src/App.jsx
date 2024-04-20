@@ -33,7 +33,7 @@ function App() {
         pagination={false}
         loop={true}
         navigation
-        className="my-swiper">
+        className="playlist-carousel">
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
         </SwiperSlide>
