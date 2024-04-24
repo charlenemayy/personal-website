@@ -14,10 +14,19 @@ import './App.css'
 
 SwiperCore.use([Navigation, Pagination, EffectCoverflow])
 
-function App() {
+export default function App() {
+  const [color, setColor] = useState([])
+
+  function changeColor(e) {
+    e.preventDefault()
+    setColor("red")
+  }
+
   return (
     <>
       <h1>Playlists</h1>
+      <div style={{backgroundColor: color}}
+      onClick={changeColor}>Click Me!</div>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -65,5 +74,3 @@ function App() {
     </>
   )
 }
-
-export default App
