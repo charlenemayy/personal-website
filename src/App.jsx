@@ -20,57 +20,59 @@ export default function App() {
   function changeColor(e) {
     e.preventDefault()
     setColor("red")
+    document.documentElement.style.setProperty("background-color", color)
   }
 
   return (
     <>
-      <h1>Playlists</h1>
-      <div style={{backgroundColor: color}}
-      onClick={changeColor}>Click Me!</div>
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 80,
-          depth: 200,
-          modifier: 1,
-          slideShadows: false,
-        }}
-        pagination={false}
-        loop={true}
-        navigation
-        className="playlist-carousel">
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-      </Swiper>
+      <div 
+      onClick={changeColor}>
+        <h1>Playlists</h1>
+        <Swiper
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={'auto'}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 80,
+            depth: 200,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          pagination={false}
+          loop={true}
+          navigation
+          className="playlist-carousel">
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </>
   )
 }
